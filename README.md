@@ -21,11 +21,12 @@ CyberOL Sub-domain via Vercel - https://http-response-analyzer.cyberol.codes/
 
 ## Setup
 1. **Backend**:
-   - Install dependencies: `pip install fastapi uvicorn httpx pydantic`
+   - Change Directory: `cd http_server`
+   - Install dependencies: `pip install fastapi uvicorn httpx pydantic` or `pip install -r requirements.txt`
    - Run: `uvicorn main:app --reload`
 
 2. **Frontend**:
-   - Install: `npx create-next-app@latest http-analyzer --typescript`
+   - Install: `npm install`
    - Run: `npm run dev`
 
 ## Usage
