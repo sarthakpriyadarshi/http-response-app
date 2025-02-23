@@ -17,14 +17,20 @@ A web application that sends HTTP requests to a user-provided URL, retrieves the
 
 ## Setup
 1. **Backend**:
-    - Install dependencies: `pip install fastapi uvicorn httpx pydantic`
-    - Run: `uvicorn main:app --reload`
+   - Install dependencies: `pip install fastapi uvicorn httpx pydantic`
+   - Run: `uvicorn main:app --reload`
 
 2. **Frontend**:
-    - Install: `npx create-next-app@latest http-analyzer --typescript`
-    - Run: `npm run dev`
+   - Install: `npx create-next-app@latest http-analyzer --typescript`
+   - Run: `npm run dev`
 
 ## Usage
+### Docker Deployment
+1. `docker pull sarthakpriyadarshi/http-analyzer-app:latest`
+2. `docker run -p 3000:3000 -p 8000:8000 sarthakpriyadarshi/http-analyzer-app`
+
+### Local Deployment
+
 1. Start the backend (`http://localhost:8000`).
 2. Start the frontend (`http://localhost:3000`).
 3. Enter a URL (e.g., `https://example.com`) and click "Go".
