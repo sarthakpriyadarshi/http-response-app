@@ -6,7 +6,7 @@ WORKDIR /app
 
 # ---- Install Backend Dependencies ----
 # Copy and install Python dependencies
-COPY http_server/requirements.txt /backend/
+COPY http_server/requirements.txt /backend/requirements.txt
 RUN apt-get update && apt-get install -y python3 python3-pip && \
     pip3 install --no-cache-dir -r /backend/requirements.txt
 
