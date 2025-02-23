@@ -1,26 +1,13 @@
-version: "3.8"
+version: '3.8'
 
 services:
-  backend:
+  app:
     build:
       context: .
-      dockerfile: Dockerfile.backend
+      dockerfile: Dockerfile
     ports:
-      - "8000:8000"
-    networks:
-      - app-network
-
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile.frontend
-    ports:
-      - "3000:3000"
-    depends_on:
-      - backend
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
+      - "3000:3000"  # Frontend (Next.js)
+      - "8000:8000"  # Backend (FastAPI)
+    environment:
+      - NODE_ENV=production
+    restart: always
