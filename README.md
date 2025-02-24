@@ -27,7 +27,7 @@ CyberOL Sub-domain via Vercel - https://http-response-analyzer.cyberol.codes/
 
 2. **Frontend**:
    - Install: `npm install`
-   - Run: `npm run dev`
+   - Run: `npm run build`
 
 ## Usage
 ### Docker Deployment
